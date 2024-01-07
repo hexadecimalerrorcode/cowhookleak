@@ -1,0 +1,56 @@
+<Tab name="Movement" padding="6 6 6 6">
+    <Box padding="12 6 6 6" width="content" height="content" name="General">
+        <List width="150">
+            <AutoVariable width="fill" target="bunnyhop.enable" label="Bhop" tooltip="Automatically bunnyhop."/>
+            <LabeledObject width="fill" label="Auto strafe">
+                <Select target="misc.autostrafe">
+                    <Option name="Off" value="0"/>
+                    <Option name="Regular" value="1"/>
+                    <Option name="Multidir" value="2"/>
+                </Select>
+            </LabeledObject>
+        </List>
+    </Box>
+    <Box padding="12 6 6 6" width="content" height="content" name="NavBot" y="55">
+        <List width="150">
+            <AutoVariable width="fill" target="nav.enabled" label="Enable pathing"/>
+            <AutoVariable width="fill" target="nav.draw" label="Draw path"/>
+            <AutoVariable width="fill" target="nav.look-at-path" label="Look at path"/>
+            <AutoVariable width="fill" target="navbot.enabled" label="Enable NavBot"/>
+            <AutoVariable width="fill" target="navbot.capture-objectives" label="Capture objectives" tooltip="Automatically capture objectives (CTF, CP, and PL only)"/>
+            <AutoVariable width="fill" target="nav.path-during-setup" label="Path during setup" tooltip="Path during setup. Will also path while the gates are closed."/>
+            <AutoVariable width="fill" target="navbot.defend-intel" label="Defend intel" tooltip="Defend our intel when its dropped or stolen"/>
+            <AutoVariable width="fill" target="navbot.defend-payload" label="Defend payload"/>
+            <AutoVariable width="fill" target="navbot.defend-idle" label="Defend idle" tooltip="Defend our current objective if there are no enemy team players or if we are idle"/>
+            <AutoVariable width="fill" target="navbot.autozoom.enabled" label="Enable autozoom"/>
+            <AutoVariable width="fill" target="navbot.primary-only-melee-range" label="Melee range"/>
+            <AutoVariable width="fill" target="navbot.search-health" label="Search for health"/>
+            <AutoVariable width="fill" target="navbot.search-ammo" label="Search for ammo"/>
+            <AutoVariable width="fill" target="navbot.stay-near" label="Stay near" tooltip="Will stay close to target if short range or run away if sniper"/>
+            <AutoVariable width="fill" target="navbot.primary-only" label="Auto best weapon"/>
+            <AutoVariable width="fill" target="navbot.melee-mode" label="Melee only"/>
+            <LabeledObject width="fill" label="Force slot">
+                <Select target="navbot.force-slot">
+                    <Option name="Don't force" value="0"/>
+                    <Option name="Primary" value="1"/>
+                    <Option name="Secondary" value="2"/>
+                    <Option name="Melee" value="3"/>
+                </Select>
+            </LabeledObject>
+            <AutoVariable width="fill" target="navbot.snipe-sentries" label="Try to target sentries"/>
+        </List>
+    </Box>
+    <Box padding="12 6 6 6" width="content" height="content" name="Misc" x="370">
+        <List width="150">
+            <AutoVariable width="fill" target="nav.stuck-time" label="Nav stuck time" tooltip="Time in milliseconds the bot is stuck until re-path"/>
+            <AutoVariable width="fill" target="nav.vischeck-runtime.enabled" label="Nav vischeck"/>
+            <AutoVariable width="fill" target="nav.vischeck-cache.time" label="Nav visc time"/>
+            <AutoVariable width="fill" target="nav.crumb-tollerance" label="Nav crumb"/>
+            <AutoVariable width="fill" target="nav.vischeck-runtime.delay" label="Nav vischeck delay"/>
+            <AutoVariable width="fill" target="navbot.repath-time.delay" label="Nav repath delay"/>
+            <AutoVariable width="fill" target="nav.anti-stuck.detection-time" label="Nav stuck time" tooltip="Time in (x) Seconds The Bot Is Stuck Until Re-Path"/>
+            <AutoVariable width="fill" target="nav.anti-stuck.expire-time" label="Nav stuck time exp" tooltip="How long until accumulated Stuck time expires"/>
+            <AutoVariable width="fill" target="nav.anti-stuck.blacklist-time" label="Nav block stuck" tooltip="How long we should blacklist the node after being stuck for too long?"/>
+        </List>
+    </Box>
+</Tab>
